@@ -50,6 +50,7 @@ public class XmlToJsonParser {
         }
       }
     }
+    System.out.println(violationsMap);
 
     List<Entry<String, Double>> returned = violationsMap.entrySet().stream()
         .sorted((e1, e2) -> -e1.getValue().compareTo(e2.getValue()))

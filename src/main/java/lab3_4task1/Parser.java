@@ -10,8 +10,8 @@ import java.util.regex.Pattern;
 
 public class Parser {
 
-  static final String FROM_FILE = "src/main/java/lab3_4/input.xml";
-  static final String TO_FILE = "src/main/java/lab3_4/output.xml";
+  static final String FROM_FILE = "src/main/java/lab3_4task1/input.xml";
+  static final String TO_FILE = "src/main/java/lab3_4task1/output.xml";
 
   public static void main(String[] args) {
     getParsedXmlFromAnotherXml(FROM_FILE, TO_FILE);
