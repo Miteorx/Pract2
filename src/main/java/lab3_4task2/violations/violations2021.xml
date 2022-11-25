@@ -1,0 +1,23 @@
+<violates>
+  <violate>
+    <date_time>"2021-05-05 15:39:03"</date_time>
+    <first_name>Ivan</first_name>
+    <last_name>Ivanov</last_name>
+    <type>RED LIGHT</type>
+    <fine_amount>5540.00</fine_amount>
+  </violate>
+  <violate>
+    <date_time>"2021-05-04 15:39:03"</date_time>
+    <first_name>Oleksandr</first_name>
+    <last_name>Ivanov</last_name>
+    <type>RED LIGHT</type>
+    <fine_amount>1540.00</fine_amount>
+  </violate>
+  <violate>
+    <date_time>"2021-05-03 15:39:03"</date_time>
+    <first_name>Oleg</first_name>
+    <last_name>Ivanov</last_name>
+    <type>RED LIGHT</type>
+    <fine_amount>1340.00</fine_amount>
+  </violate>
+</violates>
