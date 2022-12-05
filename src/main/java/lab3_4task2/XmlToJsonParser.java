@@ -1,5 +1,6 @@
 package lab3_4task2;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.core.JsonEncoding;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonGenerator;
@@ -40,14 +41,13 @@ public class XmlToJsonParser {
 
     for (File file : violations) {
       parser.parse(violationsPackageSource + "/" + file.getName(), handler);
-
-      for (Violation violate : handler.violates) {
-        if (!violationsMap.containsKey(violate.getType())) {
-          violationsMap.put(violate.getType(), violate.getFineAmount());
-        } else {
-          violationsMap.put(violate.getType(),
-              violationsMap.get(violate.getType()) + violate.getFineAmount());
-        }
+    }
+    for (Violation violate : handler.violates) {
+      if (!violationsMap.containsKey(violate.getType())) {
+        violationsMap.put(violate.getType(), violate.getFineAmount());
+      } else {
+        violationsMap.put(violate.getType(),
+            violationsMap.get(violate.getType()) + violate.getFineAmount());
       }
     }
     System.out.println(violationsMap);
@@ -62,10 +62,10 @@ public class XmlToJsonParser {
         new File("src/main/java/lab3_4task2/summary.json"), JsonEncoding.UTF8);
     jsonGenerator.setCodec(jsonMapper);
 
-    for (Entry<String, Double> para : returned) {
+    for (Entry<String, Double> pair : returned) {
       jsonGenerator.writeStartObject();
-      jsonGenerator.writeObjectField("title", para.getKey());
-      jsonGenerator.writeObjectField("amount", para.getValue());
+      jsonGenerator.writeObjectField("title", pair.getKey());
+      jsonGenerator.writeObjectField("amount", pair.getValue());
       jsonGenerator.writeEndObject();
     }
     jsonGenerator.close();

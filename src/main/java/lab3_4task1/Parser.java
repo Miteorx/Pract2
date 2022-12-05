@@ -21,11 +21,11 @@ public class Parser {
   private static void getParsedXmlFromAnotherXml(String fromFile, String toFile) {
     try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fromFile));
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(toFile));) {
-      Pattern namePattern = Pattern.compile("\\sname\\s*=\\s*\"(\\W+)\"");
-      Pattern surnamePattern = Pattern.compile("surname\\s*=\\s*\"(\\W+)\"");
+      Pattern namePattern = Pattern.compile("\\sname\\s*=\\s*\"([A-Za-zА-Яа-яІіЄєЁё]+)\"");
+      Pattern surnamePattern = Pattern.compile("surname\\s*=\\s*\"([A-Za-zА-Яа-яІіЄєЁё]++)\"");
       Pattern endPersonPattern = Pattern.compile(">");
       Pattern replaced = Pattern.compile(
-          "\\w*name\\s*=\\s*\"(\\W+)\"\\s*\\w*name\\s*=\\s*\"(\\W+)\"");
+          "\\w*name\\s*=\\s*\"([A-Za-zА-Яа-яІіЄєЁё]+)\"\\s*\\w*name\\s*=\\s*\"([A-Za-zА-Яа-яІіЄєЁё]+)\"");
 
       String name = null;
       String surname = null;
