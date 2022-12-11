@@ -1,6 +1,5 @@
 package lab3_4task2;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.core.JsonEncoding;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonGenerator;
@@ -25,7 +24,9 @@ public class XmlToJsonParser {
   private static final String VIOLATIONS_PACKAGE_SOURCE = "src/main/java/lab3_4task2/violations";
 
   public static void main(String[] args) throws Exception {
+    long start = System.currentTimeMillis();
     getSummaryViolatesFromXMLtoJSON(VIOLATIONS_PACKAGE_SOURCE);
+    System.out.println(System.currentTimeMillis() - start);
   }
 
   private static void getSummaryViolatesFromXMLtoJSON(String violationsPackageSource)
