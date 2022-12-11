@@ -1,4 +1,4 @@
-package lab4_5.secondTask;
+package lab5_6.secondTask;
 
 import java.time.Instant;
 

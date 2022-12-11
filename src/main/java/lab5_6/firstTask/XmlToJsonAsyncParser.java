@@ -1,4 +1,4 @@
-package lab4_5.firstTask;
+package lab5_6.firstTask;
 
 import com.fasterxml.jackson.core.JsonEncoding;
 import com.fasterxml.jackson.core.JsonFactory;

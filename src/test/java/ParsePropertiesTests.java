@@ -8,16 +8,14 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.annotation.Annotation;
-import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.Instant;
 import java.util.Properties;
-import lab4_5.secondTask.ApplicationPropertyObject;
-import lab4_5.secondTask.ParseProperties;
-import lab4_5.secondTask.Property;
+import lab5_6.secondTask.ApplicationPropertyObject;
+import lab5_6.secondTask.ParseProperties;
+import lab5_6.secondTask.Property;
 import org.junit.Test;
 
 public class ParsePropertiesTests {
@@ -50,7 +48,7 @@ public class ParsePropertiesTests {
       e.printStackTrace();
     }
 
-    Class test = Class.forName("lab4_5.secondTask.ApplicationPropertyObject");
+    Class test = Class.forName("lab5_6.secondTask.ApplicationPropertyObject");
     Field[] fields = test.getDeclaredFields();
     for (Field field : fields) {
       field.setAccessible(true);
